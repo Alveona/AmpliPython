@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="AmpliPython",
-    version="1.0",
+    version="1.1",
     url="https://github.com/Alveona/AmpliPython",
     license="MIT",
     author="Alveona",
