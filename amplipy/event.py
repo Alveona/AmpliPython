@@ -1,9 +1,9 @@
 from pydantic import BaseModel, root_validator, validator
-from amplipy.utils import EVENT_TYPE_BLACKLIST
+from amplipy.utils import AMPLIPY_EVENT_TYPE_BLACKLIST
 from typing import Optional
 
 
-class Event(BaseModel):
+class AmplipyEvent(BaseModel):
     user_id: str
     device_id: str
     event_type: str
@@ -44,7 +44,7 @@ class Event(BaseModel):
 
     @validator("event_type")
     def check_event_type_blacklist(cls, v):
-        if v in EVENT_TYPE_BLACKLIST:
+        if v in AMPLIPY_EVENT_TYPE_BLACKLIST:
             raise ValueError(f"Can't use {v} event type, it is reserved by Amplitude")
 
     @validator("groups")
