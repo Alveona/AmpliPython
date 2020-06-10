@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="AmpliPython",
-    version="1.1",
+    version="1.2.1",
     url="https://github.com/Alveona/AmpliPython",
     license="MIT",
     author="Alveona",
@@ -11,7 +11,7 @@ setup(
     description="AmpliPython is lightweight Amplitude Integration for event logging",
     long_description=__doc__,
     packages=["amplipython"],
-    namespace_packages=["amplipython"],
+    # namespace_packages=["amplipython"],
     zip_safe=False,
     platforms="any",
     install_requires=["pydantic", "requests"],
