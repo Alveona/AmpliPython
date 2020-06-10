@@ -4,8 +4,8 @@ from typing import Optional
 
 
 class AmplipyEvent(BaseModel):
-    user_id: str
-    device_id: str
+    user_id: Optional[str]
+    device_id: Optional[str]
     event_type: str
     time: Optional[int]
     event_properties: Optional[dict]
@@ -46,13 +46,14 @@ class AmplipyEvent(BaseModel):
     def check_event_type_blacklist(cls, v):
         if v in AMPLIPY_EVENT_TYPE_BLACKLIST:
             raise ValueError(f"Can't use {v} event type, it is reserved by Amplitude")
+        return v
 
     @validator("groups")
     def check_groups(cls, v):
         raise ValueError("Amplitude Enterprise features aren't supported yet")
 
     @validator("event_id", "session_id", "insert_id")
-    def check_groups(cls, v):
+    def check_optionals(cls, v):
         raise ValueError(
             "event_id, session_id and insert_id parameters aren't supported yet"
         )
