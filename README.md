@@ -7,7 +7,7 @@ AmpliPython
 
 
 AmpliPython is a Python library which provides an easy method to log your events with Amplitude Analytics.  
-Build with Pydantic.
+Built with Pydantic.
 
 Installing
 ----------
