@@ -1,4 +1,4 @@
-from amplipy import AmplipyClient, AmplipyEvent
+from amplipython import AmplipyClient, AmplipyEvent
 
 client = AmplipyClient(api_key="YOUR_API_KEY")
 
