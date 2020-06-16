@@ -41,7 +41,7 @@ for i in range(5):
     )
     event_list.append(event)
 
-# NOTE: Events order is dashboard is not specified!
+# NOTE: Events order in dashboard is not specified!
 client.log_events(event_list)
 
 ```
